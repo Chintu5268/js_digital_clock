@@ -1,22 +1,22 @@
 function time(){
   let dt = new Date();
-  let ht = dt.getHours();
+  var ht = dt.getHours();
   let mt = dt.getMinutes();
   let st = dt.getSeconds();
-  let session = document.getElementById('session')
+  let format = document.getElementById('session')
 
   document.getElementById("hrs").innerHTML=ht;
   document.getElementById("min").innerHTML=mt;
   document.getElementById("sec").innerHTML=st;
   
  
-  if(ht>=12){
+  if(ht>=12 || ht<10){
     hr= ht-12
-    hrs.innerHTML=hr;
+    hrs.innerHTML="0"+hr;
   }
-  if(ht<10){
-    hrs.innerHTML="0"+ht;
-  }
+  // if(ht<10){
+  //   hrs.innerHTML="0"+ht;
+  // }
   if(mt<10){
     min.innerHTML="0"+mt;
   }
@@ -29,9 +29,15 @@ function time(){
     session.innerHTML="AM"
   }
   if(ht>=20 || ht<=7){
-    document.querySelectorAll(".box4").innerHTML="Good night People"
+    document.getElementsByClassName("box4").innerHTML="Good night People";
+    document.querySelectorAll("img").innerHTML="img/Group 5194.png";
+    document.querySelectorAll(".name").innerHTML="GOOD NIGHT!!";
   }
-
+  if(ht>=16 || ht<20){
+    document.getElementsByClassName("box4").innerHTML="Good EVENING";
+    document.querySelectorAll("img").innerHTML="img/lunch_image.png";
+    document.querySelectorAll(".name").innerHTML="GOOD NIGHT!!";
+  }
 
 }
 setInterval(time,1000)
