@@ -9,15 +9,29 @@ function time(){
   document.getElementById("min").innerHTML=mt;
   document.getElementById("sec").innerHTML=st;
   
-  if(ht>12){
+ 
+  if(ht>=12){
+    hr= ht-12
+    hrs.innerHTML=hr;
+  }
+  if(ht<10){
+    hrs.innerHTML="0"+ht;
+  }
+  if(mt<10){
+    min.innerHTML="0"+mt;
+  }
+  if(st<10){
+    sec.innerHTML="0"+st;
+  }
+  if(ht>=12){
     session.innerHTML="PM";
   }else{
     session.innerHTML="AM"
   }
-  
-  if(ht && ht<7){
-    document.getElementsByClassName('sun').innerHTML=('img/Group 5194.png')
+  if(ht>=20 || ht<=7){
+    document.querySelectorAll(".box4").innerHTML="Good night People"
   }
+
 
 }
 setInterval(time,1000)
