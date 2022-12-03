@@ -10,13 +10,13 @@ function time(){
   document.getElementById("sec").innerHTML=st;
   
  
-  if(ht>=12 || ht<10){
+  if(ht>=12){
     hr= ht-12
-    hrs.innerHTML="0"+hr;
+    hrs.innerHTML=ht;
   }
-  // if(ht<10){
-  //   hrs.innerHTML="0"+ht;
-  // }
+  if(ht<10){
+    hrs.innerHTML="0"+ht;
+  }
   if(mt<10){
     min.innerHTML="0"+mt;
   }
@@ -29,15 +29,52 @@ function time(){
     session.innerHTML="AM"
   }
   if(ht>=20 || ht<=7){
-    document.getElementsByClassName("box4").innerHTML="Good night People";
-    document.querySelectorAll("img").innerHTML="img/Group 5194.png";
-    document.querySelectorAll(".name").innerHTML="GOOD NIGHT!!";
+  var change = 
+  document.getElementById('dowork');
+  change.innerHTML='Close Your Eyes and Go to Sleep!!';
+    var goodnight = 
+    document.getElementById('gn');
+    goodnight.innerHTML='GOOD NIGHT!!';
+     var img = 
+    document.getElementsById('myimg');
+    img.innerHTML=style.img="img/goodnight.png"
+   
+  }
+  if(ht>=07 || ht<11){
+    var change = 
+    document.getElementById('dowork');
+    change.innerHTML=`GRAB SOME HEALTHY BREKFAST!!`;
+      var goodnight = 
+      document.getElementById('gn');
+      goodnight.innerHTML='GOOD MORNING!! wAKE UP!!';
+       var img = 
+      document.getElementsById('myimg');
+      img.innerHTML=style.img="img/goodnight.png"
   }
   if(ht>=16 || ht<20){
-    document.getElementsByClassName("box4").innerHTML="Good EVENING";
-    document.querySelectorAll("img").innerHTML="img/lunch_image.png";
-    document.querySelectorAll(".name").innerHTML="GOOD NIGHT!!";
+    var change = 
+    document.getElementById('dowork');
+    change.innerHTML='STOP YAWINING';
+      var goodnight = 
+      document.getElementById('gn');
+      goodnight.innerHTML='GOOD EVENING!!';
+       var img = 
+      document.getElementsById('myimg');
+      img.innerHTML=style.img="img/goodnight.png"
   }
+  if(ht>=11 || ht<15){
+    var change = 
+    document.getElementById('dowork');
+    change.innerHTML=`LET'S HAVE SOME LUNCH !!`;
+      var goodnight = 
+      document.getElementById('gn');
+      goodnight.innerHTML='GOOD AFTERNOON !! TAKE SOME SLEEP';
+       var img = 
+      document.getElementsById('myimg');
+      img.innerHTML=style.img="img/goodnight.png"
+  }
+
+
 
 }
 setInterval(time,1000)
