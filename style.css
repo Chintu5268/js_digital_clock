@@ -37,11 +37,21 @@ body{
 }
 
 #optn{
-  width: 180px;
-  height: 30px;
+  width: 210px;
+  height: 40px;
   margin-top: 30px;
-  margin-left: 30px;
+  margin-left: 27px;
   border-radius: 5px;
+  background-color: rgba(211, 138, 42, 0.329);
+  color: #fff;
+  border: none;
+  line-height: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+
+}
+#optn:focus{
+  border: 1px solid red;
 }
 .new2box{
   display: flex;
@@ -57,7 +67,7 @@ body{
 }
 
 #optn2{
-  width: 180px;
+  width: 210px;
   height: 30px;
   margin-top: 30px;
   margin-left: 50px;
@@ -78,7 +88,7 @@ body{
 }
 
 #optn3{
-  width: 180px;
+  width: 210px;
   height: 30px;
   margin-top: 30px;
   margin-left: 65px;
@@ -99,7 +109,7 @@ body{
 }
 
 #optn4{
-  width: 180px;
+  width: 210px;
   height: 30px;
   margin-top: 30px;
   margin-left: 55px;
