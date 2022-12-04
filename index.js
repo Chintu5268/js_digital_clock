@@ -28,7 +28,7 @@ function time(){
   }else{
     session.innerHTML="AM"
   }
-  if(ht>=20 || ht<=7){
+  if(ht>=20 && ht<7){
   var change = 
   document.getElementById('dowork');
   change.innerHTML='Close Your Eyes and Go to Sleep!!';
@@ -40,18 +40,30 @@ function time(){
     img.innerHTML=style.img="img/goodnight.png"
    
   }
-  if(ht>=07 || ht<11){
+  if(ht>=07 && ht<11){
     var change = 
     document.getElementById('dowork');
     change.innerHTML=`GRAB SOME HEALTHY BREKFAST!!`;
       var goodnight = 
       document.getElementById('gn');
-      goodnight.innerHTML='GOOD MORNING!! wAKE UP!!';
+      goodnight.innerHTML='GOOD MORNING!! WAKE UP!!';
        var img = 
-      document.getElementsById('myimg');
+      document.getElementsById('myimg2');
       img.innerHTML=style.img="img/goodnight.png"
   }
-  if(ht>=16 || ht<20){
+  if(ht>=11 && ht<15){
+    var change = 
+    document.getElementById('dowork');
+    change.innerHTML=`LET'S HAVE SOME LUNCH !!`;
+      var goodnight = 
+      document.getElementById('gn');
+      goodnight.innerHTML='GOOD AFTERNOON !! TAKE SOME SLEEP';
+       var img = new Image();
+       img.src= 'img/afternoon.png';
+       document.getElementById('gn').appendChild(img);
+  }
+
+  if(ht>=16 && ht<20){
     var change = 
     document.getElementById('dowork');
     change.innerHTML='STOP YAWINING';
@@ -59,18 +71,7 @@ function time(){
       document.getElementById('gn');
       goodnight.innerHTML='GOOD EVENING!!';
        var img = 
-      document.getElementsById('myimg');
-      img.innerHTML=style.img="img/goodnight.png"
-  }
-  if(ht>=11 || ht<15){
-    var change = 
-    document.getElementById('dowork');
-    change.innerHTML=`LET'S HAVE SOME LUNCH !!`;
-      var goodnight = 
-      document.getElementById('gn');
-      goodnight.innerHTML='GOOD AFTERNOON !! TAKE SOME SLEEP';
-       var img = 
-      document.getElementsById('myimg');
+      document.getElementsById('myimg3');
       img.innerHTML=style.img="img/goodnight.png"
   }
 
