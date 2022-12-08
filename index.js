@@ -5,6 +5,7 @@ function time() {
   let st = dt.getSeconds();
   let format = "AM"
 
+  console.log(ht, mt, st)
   document.getElementById("hrs").innerHTML = ht;
   document.getElementById("min").innerHTML = mt;
   document.getElementById("sec").innerHTML = st;
@@ -70,29 +71,18 @@ function changeEvent(){
   let st = dt.getSeconds();
   let format = "AM"
 
+// console.log(ht, mt, st)
+
   document.getElementById("hrs").innerHTML = ht;
   document.getElementById("min").innerHTML = mt;
   document.getElementById("sec").innerHTML = st;
-  
-  if(ht >= 04 || ht < 11){
-    var img=document.getElementById('images');
-    img.src='img/morning.png';
-  }
-  else if(ht >= 12 || ht < 15){
-    var img=document.getElementById('images');
-    img.src='img/afterlunch.png';
-  }
-  if(ht >= 16 || ht < 20){
-    var img=document.getElementById('images');
-    img.src='img/evening.png';
-  }
-  if(ht >= 20 || ht < 24){
-    var img=document.getElementById('images');
-    img.src='img/goodnight.png';
-  }
+  document.getElementById('optn').innerHTML=wakeup;
+
+ 
+
    
 
 
 
 }
-setTimeout(changeEvent,500000)
+setTimeout(changeEvent,10000)
